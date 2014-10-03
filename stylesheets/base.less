@@ -35,33 +35,28 @@
 }
 
 .bracket-matcher {
-  background-color: @light_blue;
   border-radius: 2px;
-  border: 1px solid @blue;
+  border: 1px solid @red;
 }
 
-.comment {
-  color: @comment;
-  font-style: normal; }
+.comment { color: @comment; }
 
-.entity { color: @blue_tag; }
+.keyword { color: @dark_blue; font-weight: bold;}
 
-.keyword { color: @green; }
+.storage { color: @dark_blue; font-weight: bold; }
 
-.storage.type { color: @green; }
+.storage.type { color: @dark_blue; }
 
-.constant { color: @red;
-
+.constant {
   &.numeric,
-  &.boolean { color: @turquoise; }
-
+  &.boolean { color: @red; }
 }
 
 .variable { color: @blue; }
 
 .delimiter, .brace { color: @black; }
 
-.delimiter.period { color: @green; }
+.delimiter.period { color: @dark_blue; }
 
 .invalid.deprecated {
   text-decoration: underline;
@@ -86,17 +81,20 @@
 
 .css {
 
-  .entity { color: @blue; }
+  .entity { color: @blue;
+
+    &.other.attribute-name {
+      color: @blue;
+    }
+
+  }
 
   .property-name { color: @red; }
 
-  .variable { color: @green; }
+  .variable { color: @dark_blue; }
 
   .constant,
-  .unit {
-    color: @purple;
-    background-color: @light_purple;
-    border-radius: 3px; }
+  .unit { color: @purple; }
 
   .quoted { color: @orange; }
 
@@ -110,9 +108,10 @@
 
   .entity { color: @blue_tag;
 
-    &.name {
-      background-color: @light_blue;
-      border-radius: 3px; }
+    &.other.attribute-name.html {
+      color: @red;
+
+    }
 
   }
 
@@ -120,9 +119,9 @@
 
   .attribute-name { color: @blue; }
 
-  .quoted { color: @red;
+  .quoted { color: @purple;
 
-    .punctuation { color: @dark_blue; }
+    .punctuation {}
 
   }
 
@@ -142,7 +141,7 @@
       font-weight: normal; }
 
     .link {
-      color: @green;
+      color: @dark_blue;
       font-weight: normal; }
 
   }
@@ -173,19 +172,13 @@
 
   .punctuation { color: @gray_dark;
 
-    &.separator { color: red; }
+    &.separator { color: @dark_blue; }
 
   }
 
-  .quoted {
-    color: @dark_blue;
-    background-color: @light_blue;
-    border-radius: 3px;  }
+  .quoted { color: @gray_dark; }
 
-  .constant {
-    color: @purple;
-    background-color: @light_purple;
-    border-radius: 3px;  }
+  .constant {}
 
 }
 
