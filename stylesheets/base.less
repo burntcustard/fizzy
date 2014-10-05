@@ -83,8 +83,10 @@
 
   .entity { color: @blue;
 
-    &.other.attribute-name {
-      color: @blue;
+    &.other.attribute-name { color: @blue;
+
+      &.pseudo-class { color: @orange; }
+
     }
 
   }
